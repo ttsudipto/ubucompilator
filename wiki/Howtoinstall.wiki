@@ -1,0 +1,25 @@
+How to install Ubucompilator and the dependencies!
+
+= Introduction =
+
+Ubcompilator is designed to a debian-based operating system (Ubuntu, Debian, Linux Mint, Xubuntu etc.)
+
+
+= Download and install .deb package =
+_You can install the package at the page Downloads: [http://code.google.com/p/ubucompilator/downloads/list]
+
+
+# Download the .deb package
+
+# Enter in the Download folder with: `cd ~/Downloads` 
+
+and do:  `dpkg -i ubucompilator_0.0.2_all.deb`
+
+Or do double click and install with gdebi!
+
+
+Downloads
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
