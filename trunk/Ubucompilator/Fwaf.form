@@ -1,0 +1,65 @@
+# Gambas Form File 2.0
+
+{ Form Form
+  MoveScaled(0,0,80,62)
+  Text = ("")
+  { File Menu
+    Text = ("File")
+    { Exit Menu
+      Action = "ME.Close"
+      Text = ("Exit")
+    }
+  }
+  { DirChooser1 DirChooser
+    MoveScaled(1,1,34,32)
+  }
+  { TextArea1 TextArea
+    MoveScaled(37,5,40,28)
+    Text = ("")
+  }
+  { Button2 Button
+    MoveScaled(2,34,18,4)
+    Text = ("waf configure")
+    Picture = Picture["Immagini/text-x-makefile.png"]
+  }
+  { Button3 Button
+    MoveScaled(31,34,15,4)
+    Text = ("waf build")
+    Picture = Picture["Immagini/text-x-makefile.png"]
+  }
+  { Button4 Button
+    MoveScaled(62,34,15,4)
+    Text = ("waf install")
+    Picture = Picture["Immagini/text-x-makefile.png"]
+  }
+  { TextLabel1 TextLabel
+    MoveScaled(24,54,5,3)
+    Font = Font["Comic Sans MS"]
+    Text = ("email")
+  }
+  { TextLabel2 TextLabel
+    MoveScaled(33,50,17,4)
+    Font = Font["Ubuntu,+6"]
+    Text = ("Make .deb")
+  }
+  { TextBox1 TextBox
+    MoveScaled(29,53,22,4)
+    Text = ("")
+  }
+  { Button5 Button
+    MoveScaled(1,53,15,4)
+    Text = ("Dh_make")
+    Picture = Picture["Immagini/text-x-makefile.png"]
+  }
+  { Button6 Button
+    MoveScaled(63,53,15,4)
+    Text = ("Make .deb")
+    Picture = Picture["Immagini/deb.png"]
+  }
+  { TrayIcon1 #TrayIcon
+    #X = 504
+    #Y = 315
+    Visible = True
+    Picture = Picture["Immagini/ubucompilator_tray.png"]
+  }
+}
