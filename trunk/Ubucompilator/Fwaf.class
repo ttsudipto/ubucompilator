@@ -1,0 +1,124 @@
+' Gambas class file
+
+
+PUBLIC SUB MenuTray_Show()
+
+      
+END 
+
+PUBLIC SUB MenuTray_Hide()
+  
+Fmain.Visible = FALSE
+
+  
+END
+
+
+
+
+
+  PUBLIC SUB TrayIcon1_MouseDown()
+  
+IF Mouse.Left THEN  
+  IF NOT Fwaf.Visible THEN
+      Fwaf.Show()
+      
+  ELSE 
+      Fwaf.Hide()
+      
+  END IF
+END IF  
+    
+    END
+
+PUBLIC SUB Button2_Click()
+
+  
+  
+   DIM sOutput AS String
+   DIM indirizzo AS String
+
+   indirizzo = DirChooser1.SelectedPath
+
+   SHELL "cd " & indirizzo & " && " & "./waf configure" WAIT TO sOutput
+  TextArea1.Text = sOutput
+
+
+END
+
+
+
+PUBLIC SUB Button3_Click()
+
+  
+  
+   DIM sOutput AS String
+   DIM indirizzo AS String
+
+   indirizzo = DirChooser1.SelectedPath
+
+   SHELL "cd " & indirizzo & " && " & "./waf build" WAIT TO sOutput
+  TextArea1.Text = sOutput
+
+
+END
+
+
+PUBLIC SUB Button4_Click()
+
+  
+  
+   DIM sOutput AS String
+   DIM indirizzo AS String
+
+   indirizzo = DirChooser1.SelectedPath
+
+   SHELL "cd " & indirizzo & " && " & "./waf install" WAIT TO sOutput
+  TextArea1.Text = sOutput
+
+
+
+
+END
+
+PUBLIC SUB Button5_Click()
+
+  
+
+  DIM sOutput AS String
+  DIM emailadress AS String
+  DIM indirizzo AS String
+
+indirizzo = DirChooser1.SelectedPath
+
+
+  emailadress = TextBox1.Text
+  
+  SHELL "cd " & indirizzo & ";" & " dh_make -s -e " & emailadress & " -n --copyright gpl &" WAIT TO sOutput
+WAIT
+   
+ TextArea1.Text = sOutput
+
+END
+
+PUBLIC SUB Button6_Click()
+
+
+  
+  DIM sOutput AS String
+  DIM indirizzo AS String
+indirizzo = DirChooser1.SelectedPath
+
+  
+  SHELL "cd " & indirizzo & " && " & " dpkg-buildpackage" WAIT TO sOutput
+  
+ TextArea1.Text = sOutput
+
+
+END
+
+PUBLIC SUB Exit_Click()
+
+  ME.Close
+
+END
