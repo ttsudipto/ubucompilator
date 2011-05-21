@@ -1,0 +1,181 @@
+' Gambas class file
+
+
+'Close the window'
+
+PUBLIC SUB Esci_Click()
+
+  ME.Close
+
+END
+
+
+'See if are update at the google code page'
+
+PUBLIC SUB Aggiornamenti_Click()
+
+    Desktop.Open("https://code.google.com/p/ubucompilator")
+  ME.Close
+END
+
+'Read news by atom'- Will change'
+
+PUBLIC SUB Updates_Click()
+
+  Desktop.Open("http://feeds.launchpad.net/ubucompilator/announcements.atom")
+
+END
+
+'Click to report bug in Launchpad'
+
+PUBLIC SUB reportbug_Click()
+
+Desktop.Open("https://bugs.launchpad.net/ubucompilator/+filebug")
+
+END
+
+'Run the about'
+
+PUBLIC SUB About_Click()
+
+  FAbout.Show
+  
+END
+
+
+
+
+'Launch Unziptool'
+
+PUBLIC SUB Unziptool_Click()
+
+  FUNZIP.show
+
+END
+
+
+'Run autogen'
+
+PUBLIC SUB Button1_Click()
+
+  
+   DIM sOutput AS String
+   DIM indirizzo AS String
+
+   indirizzo = DirChooser1.SelectedPath
+
+   SHELL "cd " & indirizzo & " && " & " ./autogen.sh " WAIT TO sOutput
+  TextArea1.Text = sOutput
+
+
+END
+
+'Run configure'
+
+PUBLIC SUB Button2_Click()
+
+  
+   DIM sOutput AS String
+   DIM indirizzo AS String
+
+   indirizzo = DirChooser1.SelectedPath
+
+   SHELL "cd " & indirizzo & " && " & "  ./configure" WAIT TO sOutput
+  TextArea1.Text = sOutput
+
+
+END
+
+'Run make'
+
+PUBLIC SUB Button3_Click()
+
+  
+   DIM sOutput AS String
+   DIM indirizzo AS String
+
+   indirizzo = DirChooser1.SelectedPath
+
+  SHELL "cd " & indirizzo & " && " & "  make" WAIT TO sOutput
+  TextArea1.Text = sOutput
+
+END
+
+'Run sudo make install'
+
+PUBLIC SUB Button4_Click()
+
+  
+  
+  
+   DIM sOutput AS String
+   DIM indirizzo AS String
+   DIM indirizzo1 AS String
+
+   indirizzo1 = DirChooser1.SelectedPath
+   indirizzo = DirChooser1.SelectedPath
+
+   SHELL "cd " & indirizzo & " && " & " gksudo make install" WAIT TO sOutput
+  TextArea1.Text = sOutput
+
+
+END
+
+'Dh_make button'
+
+PUBLIC SUB Button5_Click()
+
+  
+
+  DIM sOutput AS String
+  DIM emailadress AS String
+  DIM indirizzo AS String
+
+indirizzo = DirChooser1.SelectedPath
+
+
+  emailadress = TextBox1.Text
+  
+  SHELL "cd " & indirizzo & ";" & " dh_make -s -e " & emailadress & " -n --copyright gpl &" WAIT TO sOutput
+WAIT
+   
+ TextArea1.Text = sOutput
+END
+
+
+
+'Create package '
+
+PUBLIC SUB Button6_Click()
+
+  
+  DIM sOutput AS String
+  DIM indirizzo AS String
+indirizzo = DirChooser1.SelectedPath
+
+  
+  SHELL "cd " & indirizzo & " && " & " dpkg-buildpackage" WAIT TO sOutput
+  
+ TextArea1.Text = sOutput
+
+
+END
+
+
+
+PUBLIC SUB Form_Open()
+
+  
+
+END
+
+'Edit control file, fondamental to make a good .deb package '
+
+PUBLIC SUB Button8_Click()
+DIM sOutput AS String
+  DIM indirizzo AS String
+  indirizzo = DirChooser1.SelectedPath
+  
+  SHELL "cd " & indirizzo & " && " & "xdg-open debian/control  "
+
+END
