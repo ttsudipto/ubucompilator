@@ -10,7 +10,7 @@ Homepage: http://www.ubucompilator.com
 
 Package: ubucompilator
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${misc:Depends}, dh-make, build-essential
 Description: Ubucompilator, compile and make .deb easly
 
 
