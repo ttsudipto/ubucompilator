@@ -1,0 +1,16 @@
+Source: ubucompilator
+Section: unknown
+Priority: extra
+Maintainer: gusions <gusions@gmail.com>
+Build-Depends: debhelper (>= 7.0.50~)
+Standards-Version: 3.8.4
+Homepage: http://www.ubucompilator.com
+#Vcs-Git: git://git.debian.org/collab-maint/ubucompilator.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/ubucompilator.git;a=summary
+
+Package: ubucompilator
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Ubucompilator, compile and make .deb easly
+
+
