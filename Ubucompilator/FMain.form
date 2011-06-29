@@ -1,0 +1,79 @@
+# Gambas Form File 2.0
+
+{ Form Form
+  MoveScaled(0,0,82,70)
+  Text = ("")
+  Icon = Picture["ubucompilator.png"]
+  Border = Window.Fixed
+  { Ubucompilator Menu
+    Text = ("Ubucompilator")
+    { Unziptool Menu
+      Text = ("Unziptool")
+    }
+    { Esci Menu
+      Text = ("Esci")
+    }
+  }
+  { Informazioni Menu
+    Text = ("About")
+    { Updates Menu
+      Text = ("Updates")
+    }
+    { reportbug Menu
+      Text = ("Report Bug")
+    }
+    { About Menu
+      Text = ("About Ubucompilator")
+    }
+  }
+  { DirChooser1 DirChooser
+    MoveScaled(2,2,34,32)
+    ShowSplitter = False
+  }
+  { TextArea1 TextArea
+    MoveScaled(38,6,40,28)
+    Text = ("")
+  }
+  { Button1 Button
+    MoveScaled(2,37,15,4)
+    Text = ("Autogen")
+  }
+  { Button2 Button
+    MoveScaled(20,37,15,4)
+    Text = ("./Configure")
+  }
+  { Button3 Button
+    MoveScaled(40,37,15,4)
+    Text = ("Make")
+  }
+  { Button4 Button
+    MoveScaled(62,37,15,4)
+    Text = ("Make Install")
+  }
+  { TextLabel1 TextLabel
+    MoveScaled(25,55,5,3)
+    Font = Font["Comic Sans MS"]
+    Text = ("email")
+  }
+  { TextLabel2 TextLabel
+    MoveScaled(34,51,17,4)
+    Font = Font["Ubuntu,+6"]
+    Text = ("Make .deb")
+  }
+  { TextBox1 TextBox
+    MoveScaled(30,54,22,4)
+    Text = ("")
+  }
+  { Button5 Button
+    MoveScaled(1,60,15,4)
+    Text = ("Dh_make")
+  }
+  { Button6 Button
+    MoveScaled(61,60,18,4)
+    Text = ("Make .deb")
+  }
+  { Button8 Button
+    MoveScaled(31,60,20,4)
+    Text = ("edit control file")
+  }
+}
