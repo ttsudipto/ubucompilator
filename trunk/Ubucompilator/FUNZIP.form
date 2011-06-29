@@ -1,0 +1,24 @@
+# Gambas Form File 2.0
+
+{ Form Form
+  MoveScaled(0,0,96,58)
+  Text = ("Unziptool")
+  Icon = Picture["Immagini/package-x-generic.png"]
+  { Button1 Button
+    MoveScaled(1,51,23,5)
+    Text = ("Unzip .zip ")
+  }
+  { FileChooser1 FileChooser
+    MoveScaled(1,1,93,48)
+    Filter = [("*tar.gz"), (".tar.gz"), ("*zip"), (".zip"), ("*tar.bz2"), (".tar.bz2")]
+    ShowDetailed = True
+  }
+  { Button2 Button
+    MoveScaled(35,51,23,5)
+    Text = ("Unzip .tar.gz")
+  }
+  { Button3 Button
+    MoveScaled(71,51,23,5)
+    Text = ("Unzip .tar.bz2")
+  }
+}
