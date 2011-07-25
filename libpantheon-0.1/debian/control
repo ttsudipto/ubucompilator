@@ -1,0 +1,14 @@
+Source: libpantheon
+Priority: extra
+Maintainer: gusions <gusions@gmail.com>
+Build-Depends: debhelper (>= 7.0.50~), cmake
+Standards-Version: 3.9.1
+Homepage: http://www.elementaryositdev.wordpress.com
+#Vcs-Git: git://git.debian.org/collab-maint/libpantheon.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/libpantheon.git;a=summary
+
+Package: libpantheon-dev
+Architecture: all
+Depends: pantheon0 (=${binary:Version})
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>
