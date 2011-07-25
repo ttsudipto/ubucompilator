@@ -1,0 +1,18 @@
+                                   Install                                      
+--------------------------------------------------------------------------------
+
+• Build libpantheon
+
+  bzr branch lp:libpantheon
+  cd libpantheon
+  mkdir build; cd build
+  cmake .. -DCMAKE_INSTALL_PREFIX=/usr
+  make
+  sudo make install
+
+• Bugs
+
+  If you find bugs in this installation guide or in libpantheon itself, please report them at
+  https://launchpad.net/libpantheon/+filebug
+
+
