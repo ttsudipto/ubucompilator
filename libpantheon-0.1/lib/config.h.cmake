@@ -1,0 +1,7 @@
+#ifndef H_CONFIG
+#define H_CONFIG
+
+#cmakedefine LIBPANTHEON_NLS_LOCALEDIR "@LIBPANTHEON_NLS_LOCALEDIR@"
+#cmakedefine RESOURCES_DIR "@RESOURCES_DIR@"
+
+#endif
