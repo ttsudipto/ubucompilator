@@ -1,0 +1,7 @@
+/usr/lib/pkgconfig/pantheon.pc
+/usr/share/vala/vapi/pantheon.vapi
+/usr/share/vala/vapi/pantheon.deps
+/usr/include/pantheon/pantheon.h
+/usr/lib/libpantheon.so.0.1
+/usr/lib/libpantheon.so.0
+/usr/lib/libpantheon.so
